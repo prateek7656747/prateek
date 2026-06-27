@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-royal-50: #f0f7ff;
+  --color-royal-100: #e0effe;
+  --color-royal-200: #badffd;
+  --color-royal-300: #7cc3fc;
+  --color-royal-400: #38a4f9;
+  --color-royal-500: #0f8bf3;
+  --color-royal-600: #026ecc;
+  --color-royal-700: #0f4c81;
+  --color-royal-800: #074070;
+  --color-royal-900: #0b365d;
+  --color-royal-950: #07223d;
+
+  --color-orange-brand-50: #fff8f6;
+  --color-orange-brand-100: #ffeedc;
+  --color-orange-brand-200: #ffddb3;
+  --color-orange-brand-300: #ffbf7a;
+  --color-orange-brand-400: #f97316;
+  --color-orange-brand-500: #ea580c;
+  --color-orange-brand-600: #ca8a04;
+  --color-orange-brand-700: #a16207;
+  --color-orange-brand-800: #854d0e;
+  --color-orange-brand-900: #713f12;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-slate-50 text-slate-900 antialiased transition-colors duration-300;
+  }
+}
+
+/* Custom CSS utilities */
+.mesh-bg {
+  background: radial-gradient(at 0% 0%, #0f4c81 0%, #0b365d 40%, #051c32 75%, #f97316 100%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.mesh-bg-light {
+  background: radial-gradient(at 0% 0%, #e0effe 0%, #bfdbfe 40%, #ffeedc 75%, #ffedd5 100%);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark .glass-navbar {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 8px 32px 0 rgba(15, 76, 129, 0.08) !important;
+}
+
+.dark .glass-card {
+  background: rgba(15, 23, 42, 0.45) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.orange-glow {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.35);
+}
+
+.status-pill {
+  background: rgba(239, 68, 68, 0.95);
+  animation: pulse 2.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: .5;
+    transform: scale(0.95);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 76, 129, 0.3);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.6);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}

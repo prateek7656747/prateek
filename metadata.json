@@ -1,0 +1,6 @@
+{
+  "name": "Bhadauriya Classes",
+  "description": "Official website of Bhadauriya Classes, Orai - Uttar Pradesh's premium competitive exam coaching for SSC, SSC CGL, CTET, CAT, and government jobs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
