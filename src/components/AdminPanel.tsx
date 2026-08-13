@@ -176,13 +176,10 @@ export default function AdminPanel({
       <button
         id="btn-admin-floating-trigger"
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 left-6 z-40 p-4 rounded-full bg-slate-900 hover:bg-royal-750 text-white shadow-2xl flex items-center space-x-2 border border-slate-750 transition-all cursor-pointer"
-        title="Admin Settings Panel"
+        className="fixed bottom-4 left-4 z-40 p-2 rounded-full bg-transparent text-slate-400/50 dark:text-slate-600/50 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:text-slate-700 dark:hover:text-slate-300 transition-all cursor-pointer"
+        title="System"
       >
-        <Settings className="animate-spin-slow w-5 h-5" />
-        <span className="text-xs font-bold font-display uppercase tracking-wider hidden sm:inline">
-          Admin Dashboard
-        </span>
+        <Settings className="w-4 h-4" />
       </button>
     );
   }
